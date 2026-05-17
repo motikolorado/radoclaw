@@ -3,7 +3,8 @@
     "controlUi": {
       "allowInsecureAuth": true,
       "allowedOrigins": [
-        "https://radoclaw.fly.dev"
+        "https://radoclaw.fly.dev",
+        "radoclaw.fly.dev"
       ]
     }
   }
