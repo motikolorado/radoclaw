@@ -13,9 +13,11 @@ NODE_ENV = "production"
 OPENCLAW_PREFER_PNPM = "1"
 OPENCLAW_STATE_DIR = "/data"
 NODE_OPTIONS = "--max-old-space-size=1536"
+OPENCLAW_GATEWAY_CONTROLUI_ALLOWINSECUREAUTH = "true"
+OPENCLAW_GATEWAY_CONTROLUI_ALLOWEDORIGINS = '["https://radoclaw.fly.dev"]'
 
 [processes]
-app = "node dist/index.js gateway --allow-unconfigured --port 3000 --bind lan --gateway.controlUi.allowInsecureAuth=true --gateway.controlUi.allowedOrigins=https://radoclaw.fly.dev"
+app = "node dist/index.js gateway --allow-unconfigured --port 3000 --bind lan"
 
 [http_service]
 internal_port = 3000
