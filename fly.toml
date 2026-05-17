@@ -16,7 +16,12 @@ NODE_OPTIONS = "--max-old-space-size=1536"
 OPENCLAW_CONFIG_PATH = "/data/openclaw.json"
 
 [processes]
-app = "node dist/index.js gateway --allow-unconfigured --port 3000 --bind lan"
+app = """sh -c '
+    mkdir -p /data &&
+    chown -R 1000:1000 /data 2>/dev/null || true &&
+    chmod -R 755 /data &&
+    node dist/index.js gateway --port 3000 --bind lan
+  '"""
 
 [http_service]
 internal_port = 3000
