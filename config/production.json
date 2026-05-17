@@ -1,0 +1,10 @@
+{
+  "gateway": {
+    "controlUi": {
+      "allowInsecureAuth": true,
+      "allowedOrigins": [
+        "https://radoclaw.fly.dev"
+      ]
+    }
+  }
+}
